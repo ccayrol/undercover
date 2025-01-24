@@ -92,7 +92,7 @@ const GameScreen = ({ route, navigation }) => {
       return true;
     }
 
-    if (innocents.length === 0) {
+    if (innocents.length === 0 || (innocents.length === 1 && undercovers.length === 1)) {
       setWinner('Undercover');
       setGameOver(true);
       startGameAnimation();
